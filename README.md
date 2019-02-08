@@ -10,7 +10,7 @@ Line is considered to be a string of characters delimited by '\n'.
 
 ### General use (simple main)
 
-#include <stdio.h>
+	# include <stdio.h>
 
 	int	main(int args, char **argv)
 	{
