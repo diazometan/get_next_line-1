@@ -12,22 +12,22 @@ Line is considered to be a string of characters delimited by '\n'.
 
 #include <stdio.h>
 
-int	main(int args, char **argv)
-{
-	int		fd;
-	int		err;
-	char	*line;
-
-	if (args == 2)
+	int	main(int args, char **argv)
 	{
-		fd = open(argv[1], O_RDONLY);
-		while ((err = get_next_line(fd, &line)))
-			printf("%s\n", line);
-		free(line);
-		if (err = -1)
-			printf("error occured!\n");
+		int		fd;
+		int		err;
+		char	*line;
+
+		if (args == 2)
+		{
+			fd = open(argv[1], O_RDONLY);
+			while ((err = get_next_line(fd, &line)))
+				printf("%s\n", line);
+			free(line);
+			if (err = -1)
+				printf("error occured!\n");
+		}
+		else
+			printf("Please enter one argument\n");
+		return (0);
 	}
-	else
-		printf("Please enter one argument\n");
-	return (0);
-}
