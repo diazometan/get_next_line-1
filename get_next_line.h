@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # define BUFF_SIZE 4096
-# define FD_MAX 11000
+//# define FD_MAX 11000
 
 # include <stdlib.h>
 # include "libft/libft.h"
